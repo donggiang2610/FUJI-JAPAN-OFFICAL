@@ -302,18 +302,18 @@ const Admin = () => {
       const staticCategories = [
         {
           id: "control-cabinets",
-          name_th: "ตู้ควบคุม",
+          name_ja: "制御盤",
           name_en: "Control Cabinets",
-          description_th: "ตู้ควบคุมลิฟต์ที่ทันสมัย",
+          description_ja: "最新のエレベーター制御盤",
           description_en: "Modern elevator control cabinets",
           icon: "Settings",
           is_active: true
         },
         {
           id: "traction-machines",
-          name_th: "เครื่องลาก",
+          name_ja: "トラクションマシン",
           name_en: "Traction Machines",
-          description_th: "เครื่องลากลิฟต์ประสิทธิภาพสูง",
+          description_ja: "高性能エレベータートラクションマシン",
           description_en: "High-performance elevator traction machines",
           icon: "Cpu",
           is_active: true
@@ -520,7 +520,7 @@ const Admin = () => {
                                   {product.image_url ? (
                                     <img 
                                       src={product.image_url} 
-                                      alt={language === 'th' ? product.name_th : product.name_en}
+                                      alt={language === 'ja' ? product.name_ja : product.name_en}
                                       className="w-12 h-12 object-cover rounded border"
                                     />
                                   ) : (
@@ -543,14 +543,14 @@ const Admin = () => {
                                         productId={product.id}
                                         currentImageUrl={product.image_url}
                                         onImageUpdate={(newUrl) => handleImageUpdate(product.id, newUrl)}
-                                       language={'en' as 'en' | 'ko'}
+                                       language={'en' as 'en' | 'ja'}
                                       />
                                     </DialogContent>
                                   </Dialog>
                                 </div>
                               </TableCell>
                               <TableCell>
-                                {language === 'th' ? product.name_th : product.name_en}
+                                {language === 'ja' ? product.name_ja : product.name_en}
                               </TableCell>
                               <TableCell>
                                 <div className="flex items-center gap-2">
@@ -570,7 +570,7 @@ const Admin = () => {
                               </TableCell>
                               <TableCell>
                                 {product.category ? 
-                                  (language === 'th' ? product.category.name_th : product.category.name_en)
+                                  (language === 'ja' ? product.category.name_ja : product.category.name_en)
                                   : 'N/A'
                                 }
                               </TableCell>
@@ -703,10 +703,10 @@ const Admin = () => {
                           {categories.map((category) => (
                             <TableRow key={category.id}>
                               <TableCell>
-                                {language === 'th' ? category.name_th : category.name_en}
+                                {language === 'ja' ? category.name_ja : category.name_en}
                               </TableCell>
                               <TableCell>
-                                {language === 'th' ? category.description_th : category.description_en}
+                                {language === 'ja' ? category.description_ja : category.description_en}
                               </TableCell>
                               <TableCell>{category.icon}</TableCell>
                               <TableCell>
