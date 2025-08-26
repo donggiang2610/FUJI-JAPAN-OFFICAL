@@ -8,9 +8,6 @@ import { ServicesSection } from "@/components/home/services-section";
 import { CompanyOverview } from "@/components/home/company-overview";
 import { NewsStoriesSection } from "@/components/home/news-stories-section";
 import { TechnologyShowcase } from "@/components/home/technology-showcase";
-import { CompanyOverview } from "@/components/home/company-overview";
-import { NewsStoriesSection } from "@/components/home/news-stories-section";
-import { TechnologyShowcase } from "@/components/home/technology-showcase";
 import { useLanguage } from "@/hooks/use-language";
 
 const Index = () => {
@@ -23,13 +20,10 @@ const Index = () => {
       <main className="pt-20">
         <HeroSection language={language} />
         <CompanyOverview language={language} />
-        <CompanyOverview language={language} />
         <SerialSearchSection language={language} />
         <FeaturedProducts language={language} />
         <TechnologyShowcase language={language} />
-        <TechnologyShowcase language={language} />
         <ServicesSection language={language} />
-        <NewsStoriesSection language={language} />
         <NewsStoriesSection language={language} />
       </main>
       
