@@ -59,57 +59,135 @@ export const HeroSection = ({
   const navigate = useNavigate();
   
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/20 to-secondary/10">
-      {/* Background Elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Siemens-style Background with Blue Rays */}
       <div className="absolute inset-0">
-        <img src={modernBuildingHero} alt="Modern building background" className="w-full h-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background/80 to-secondary/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)] bg-[radial-gradient(circle_at_70%_80%,hsl(var(--secondary)/0.15),transparent_50%)]" />
+        {/* Blue ray pattern background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10"></div>
+        
+        {/* Animated blue rays */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute top-1/2 left-1/2 w-1 bg-gradient-to-t from-transparent via-primary/30 to-transparent transform-gpu"
+              style={{
+                height: '200vh',
+                transformOrigin: 'center bottom',
+                transform: `translate(-50%, -50%) rotate(${i * 30}deg)`,
+                animation: `pulse ${2 + i * 0.2}s ease-in-out infinite alternate`
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Central glow */}
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Logo */}
-          <div className="flex justify-center mb-8">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
-              <img 
-                src="/lovable-uploads/953a7391-286a-477b-9b1a-4ec116b84c16.png" 
-                alt="Thai Fuji Elevator Logo" 
-                className="relative h-20 md:h-24 lg:h-28 w-auto object-contain drop-shadow-2xl"
-              />
+          {/* FUJI Logo */}
+          <div className="flex justify-center mb-12">
+            <div className="text-6xl md:text-8xl font-bold text-white tracking-wider">
+              FUJI
             </div>
           </div>
+          
+          {/* Japanese subtitle */}
+          <div className="text-lg md:text-xl text-primary mb-8 font-medium tracking-widest">
+            富士エレベーター
+          </div>
 
-          {/* Main Title */}
-          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-8 ${language === 'ja' ? 'font-noto-jp' : 'font-montserrat'}`}>
-            <span className="block text-foreground">{t.title}</span>
-            <span className="block bg-gradient-to-r from-primary via-primary-glow to-secondary bg-clip-text text-transparent">
-              {t.titleHighlight}
+          {/* Main Taglines */}
+          <div className="space-y-4 mb-12">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-wide">
+              SMART CONTROL
+            </h1>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide flex items-center justify-center gap-4">
+              <span className="text-primary">▶</span>
+              STRONG DRIVE
+              <span className="text-secondary">◀</span>
+            </h2>
+            <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide">
+              SEAMLESS RIDE
+            </h3>
+          </div>
+          
+          {/* Company name */}
+          <div className="text-lg md:text-xl text-muted-foreground mb-12 tracking-widest font-medium">
+            FUJI JAPAN ELEVATOR CO., LTD
+          </div>
+
+          {/* Traditional subtitle */}
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
+            {language === 'ja' 
+              ? '1995年創業 - 日本の伝統的な職人技術と最新のエレベーター技術を融合した、信頼性の高い垂直輸送ソリューションを提供'
+              : 'Since 1995 - Combining traditional Japanese craftsmanship with cutting-edge elevator technology for reliable vertical transportation solutions'
+            }
+          </p>
+
+          {/* Elevator equipment showcase */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto">
+            <div className="siemens-card group">
+              <div className="p-6">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                  <span className="text-2xl text-white">🏗️</span>
+                </div>
+                <h4 className="text-lg font-bold text-foreground mb-2">
+                  {language === 'ja' ? '制御システム' : 'Control Systems'}
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  {language === 'ja' ? '最先端のスマート制御技術' : 'Advanced smart control technology'}
+                </p>
+              </div>
+            </div>
+            
+            <div className="siemens-card group">
+              <div className="p-6">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-secondary to-primary rounded-lg flex items-center justify-center">
+                  <span className="text-2xl text-white">⚙️</span>
+                </div>
+                <h4 className="text-lg font-bold text-foreground mb-2">
+                  {language === 'ja' ? 'ドライブシステム' : 'Drive Systems'}
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  {language === 'ja' ? '強力で効率的な駆動技術' : 'Powerful and efficient drive technology'}
+                </p>
+              </div>
+            </div>
+            
+            <div className="siemens-card group">
+              <div className="p-6">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                  <span className="text-2xl text-white">🚀</span>
+                </div>
+                <h4 className="text-lg font-bold text-foreground mb-2">
+                  {language === 'ja' ? 'スムーズライド' : 'Seamless Ride'}
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  {language === 'ja' ? '快適で静かな乗り心地' : 'Comfortable and quiet ride experience'}
+                </p>
+              </div>
+            </div>
             </span>
           </h1>
-          
-          {/* Subtitle */}
-          <p className={`text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12 ${language === 'ja' ? 'font-noto-jp' : 'font-open-sans'}`}>
-            {t.subtitle}
-          </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button 
               size="lg" 
-              className="group relative overflow-hidden bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 text-lg font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+              className="group relative overflow-hidden btn-siemens px-8 py-4 text-lg font-semibold"
               onClick={() => navigate('/products')}
             >
               <span className="relative z-10">{t.cta1}</span>
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="group glass-morphism border-border/50 backdrop-blur-xl text-lg px-8 py-4 font-semibold hover:bg-muted/50 hover:border-primary/50 transition-all duration-300"
+              className="group border-primary/50 text-primary hover:bg-primary/10 text-lg px-8 py-4 font-semibold transition-all duration-300"
               onClick={() => navigate('/about')}
             >
               <Play className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
@@ -121,8 +199,7 @@ export const HeroSection = ({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {t.stats.map((stat, index) => (
               <div key={index} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative glass-morphism border border-border/50 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg backdrop-blur-xl">
+                <div className="siemens-card p-6 text-center">
                   <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">
                     {stat.number}
                   </div>
@@ -133,49 +210,8 @@ export const HeroSection = ({
               </div>
             ))}
           </div>
-
-          {/* Featured Images */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative overflow-hidden rounded-3xl border border-border/50">
-                <img src={elevatorInstallation} alt="Trusted Installation" className="w-full h-80 object-cover transition-all duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="glass-morphism rounded-2xl p-6 border border-border/30 backdrop-blur-xl">
-                    <h4 className={`font-bold text-xl mb-3 text-foreground ${language === 'ja' ? 'font-noto-jp' : 'font-montserrat'}`}>
-                      {language === 'ja' ? '信頼できる設置' : 'Trusted Installation'}
-                    </h4>
-                    <p className={`text-sm text-muted-foreground leading-relaxed ${language === 'ja' ? 'font-noto-jp' : 'font-open-sans'}`}>
-                      {language === 'ja' ? '最新のイノベーションで安全かつ効率的' : 'Safe and efficient with latest innovations'}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-3xl shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative overflow-hidden rounded-3xl border border-border/50">
-                <img src={elevatorControlRoom} alt="Intelligent Control Systems" className="w-full h-80 object-cover transition-all duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="glass-morphism rounded-2xl p-6 border border-border/30 backdrop-blur-xl">
-                    <h4 className={`font-bold text-xl mb-3 text-foreground ${language === 'ja' ? 'font-noto-jp' : 'font-montserrat'}`}>
-                      {language === 'ja' ? 'インテリジェント制御システム' : 'Intelligent Control Systems'}
-                    </h4>
-                    <p className={`text-sm text-muted-foreground leading-relaxed ${language === 'ja' ? 'font-noto-jp' : 'font-open-sans'}`}>
-                      {language === 'ja' ? 'リアルタイム監視とスマート管理' : 'Real-time monitoring and smart management'}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-
-      {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent"></div>
     </section>
   );
 };

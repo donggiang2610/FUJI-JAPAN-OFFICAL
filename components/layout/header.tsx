@@ -65,16 +65,20 @@ export const Header = ({
   const nav = navigation[language];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-morphism border-b border-white/20 bg-slate-50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20 bg-slate-50">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <NavLink to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/e0326921-6f08-4e36-bf37-3adf3bd694a0.png" 
               alt="FUJI Japan Elevator" 
-              className="h-11 w-auto md:h-14 object-contain bg-transparent" 
+              className="h-10 w-auto md:h-12 object-contain brightness-0 invert" 
             />
+            <div className="hidden md:block">
+              <div className="text-lg font-bold text-foreground">FUJI</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wider">Japan Elevator</div>
+            </div>
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -84,13 +88,16 @@ export const Header = ({
                 key={item.name} 
                 to={item.href} 
                 className={({ isActive }) => 
-                  `px-3 py-2 text-sm font-medium transition-colors rounded-md ${
+                  `px-4 py-2 text-sm font-medium transition-all duration-300 rounded-md relative group ${
                     isActive 
-                      ? 'text-primary bg-primary/10' 
-                      : 'text-foreground hover:text-primary hover:bg-primary/5'
+                      ? 'text-primary' 
+                      : 'text-foreground hover:text-primary'
                   }`
                 }
               >
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary"></div>
+                )}
                 {item.name}
               </NavLink>
             ))}
@@ -114,7 +121,7 @@ export const Header = ({
               variant="ghost" 
               size="sm" 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-              className="glass-morphism"
+              className="text-foreground hover:text-primary"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -124,7 +131,7 @@ export const Header = ({
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 glass-morphism rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-card border border-border rounded-lg mt-2">
               {nav.map(item => (
                 <NavLink 
                   key={item.name} 

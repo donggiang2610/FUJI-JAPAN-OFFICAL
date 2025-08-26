@@ -74,58 +74,16 @@ export const Footer = ({
 }: FooterProps) => {
   const t = content[language];
   return <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-5 bg-cover bg-center" style={{
-        backgroundImage: `url(${worldMapBg})`
-      }} />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary-foreground/10" />
-      </div>
-
-      {/* Animated Background Particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-full blur-xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-br from-primary-foreground/20 to-primary/20 rounded-full blur-xl animate-pulse animation-delay-2000" />
-        <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-gradient-to-br from-primary/10 to-primary-foreground/10 rounded-full blur-2xl animate-pulse animation-delay-4000" />
-      </div>
-
       <div className="relative container mx-auto px-4 py-16">
-        {/* Newsletter Section */}
-        <div className="mb-16">
-          <Card className="border-0 bg-gradient-to-r from-primary/20 via-primary-foreground/20 to-primary/20 backdrop-blur-sm">
-            <CardContent className="p-12 text-center">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Star className="w-8 h-8 text-primary" />
-                <h3 className="text-3xl font-bold">{t.newsletter}</h3>
-                <Star className="w-8 h-8 text-primary" />
-              </div>
-              <p className="mb-8 max-w-2xl mx-auto text-lg text-slate-950">
-                {t.newsletterText}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input type="email" placeholder="Enter your email" className="flex-1 px-6 py-4 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary rounded-xl bg-[#232236]" />
-                <Button className="px-8 py-4 bg-gradient-to-r from-primary to-primary-foreground hover:scale-105 transition-all duration-300 group">
-                  <Zap className="mr-2 w-5 h-5" />
-                  {t.subscribe}
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-4 mb-6">
-              <img src="/lovable-uploads/b54c91b9-8d26-4cc2-a3fc-2c6826e592c5.png" alt="THAI FUJI ELEVATOR" className="h-20 w-auto object-contain" />
-              <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-                  {t.company}
-                </h3>
-                <p className="text-primary-foreground font-medium">{t.tagline}</p>
-              </div>
+            <div className="mb-6">
+              <h3 className="text-3xl font-bold text-white mb-2">
+                FUJI
+              </h3>
+              <p className="text-muted-foreground">{t.tagline}</p>
             </div>
             <p className="text-white/70 text-lg leading-relaxed max-w-lg mb-8">
               {language === 'ja' ? "富士日本エレベーター株式会社は、先進的な日本の技術、AIイノベーション、スマートシステムを備えた乗用エレベーター、貨物エレベーター、エスカレーター、メンテナンス、モダナイゼーションサービスの大手プロバイダーです。" : "FUJI Japan Elevator is a leading provider of passenger elevators, freight elevators, escalators, maintenance and modernization services with advanced Japanese technology, AI innovations and smart systems."}
@@ -133,30 +91,29 @@ export const Footer = ({
             
             {/* Social Icons */}
             <div className="flex space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer group">
-                <Facebook className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+              <div className="w-10 h-10 border border-white/20 rounded flex items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                <Facebook className="w-5 h-5 text-white" />
               </div>
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer group">
-                <Twitter className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+              <div className="w-10 h-10 border border-white/20 rounded flex items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                <Twitter className="w-5 h-5 text-white" />
               </div>
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer group">
-                <Linkedin className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+              <div className="w-10 h-10 border border-white/20 rounded flex items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                <Linkedin className="w-5 h-5 text-white" />
               </div>
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer group">
-                <Youtube className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+              <div className="w-10 h-10 border border-white/20 rounded flex items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                <Youtube className="w-5 h-5 text-white" />
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-xl mb-8 bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">
+            <h4 className="font-bold text-lg mb-6 text-white">
               {t.quickLinks}
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {t.links.map(link => <li key={link.name}>
-                  <a href={link.href} className="text-white/70 hover:text-primary transition-all duration-300 text-lg flex items-center group">
-                    <ArrowRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                  <a href={link.href} className="text-white/70 hover:text-primary transition-all duration-300 text-sm">
                     {link.name}
                   </a>
                 </li>)}
@@ -165,36 +122,28 @@ export const Footer = ({
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-bold text-xl mb-8 bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">
+            <h4 className="font-bold text-lg mb-6 text-white">
               {t.contact}
             </h4>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4 group hover:scale-105 transition-transform duration-300">
-                <div className="p-3 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-xl">
-                  <MapPin className="h-5 w-5 text-primary" />
-                </div>
-                <p className="text-white/70 text-sm leading-relaxed group-hover:text-white transition-colors">{t.address}</p>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-4 w-4 text-primary mt-1" />
+                <p className="text-white/70 text-sm leading-relaxed">{t.address}</p>
               </div>
               
-              <div className="flex items-center space-x-4 group hover:scale-105 transition-transform duration-300">
-                <div className="p-3 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-xl">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <p className="text-white/70 text-lg group-hover:text-white transition-colors">{t.phone}</p>
+              <div className="flex items-center space-x-3">
+                <Phone className="h-4 w-4 text-primary" />
+                <p className="text-white/70 text-sm">{t.phone}</p>
               </div>
               
-              <div className="flex items-center space-x-4 group hover:scale-105 transition-transform duration-300">
-                <div className="p-3 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-xl">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <p className="text-white/70 text-lg group-hover:text-white transition-colors">{t.email}</p>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-4 w-4 text-primary" />
+                <p className="text-white/70 text-sm">{t.email}</p>
               </div>
               
-              <div className="flex items-center space-x-4 group hover:scale-105 transition-transform duration-300">
-                <div className="p-3 bg-gradient-to-br from-primary/20 to-primary-foreground/20 rounded-xl">
-                  <div className="h-5 w-5 text-primary">🌐</div>
-                </div>
-                <p className="text-white/70 text-lg group-hover:text-white transition-colors">{t.website}</p>
+              <div className="flex items-center space-x-3">
+                <div className="h-4 w-4 text-primary">🌐</div>
+                <p className="text-white/70 text-sm">{t.website}</p>
               </div>
             </div>
           </div>
@@ -203,15 +152,15 @@ export const Footer = ({
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/60 text-sm">{t.copyright}</p>
+            <p className="text-white/60 text-xs">{t.copyright}</p>
             <div className="flex space-x-8 mt-4 md:mt-0">
-              <a href="#" className="text-white/60 hover:text-primary text-sm transition-colors duration-300">
+              <a href="#" className="text-white/60 hover:text-primary text-xs transition-colors duration-300">
                 {language === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}
               </a>
-              <a href="#" className="text-white/60 hover:text-primary text-sm transition-colors duration-300">
+              <a href="#" className="text-white/60 hover:text-primary text-xs transition-colors duration-300">
                 {language === 'ja' ? '利用規約' : 'Terms of Service'}
               </a>
-              <a href="#" className="text-white/60 hover:text-primary text-sm transition-colors duration-300">
+              <a href="#" className="text-white/60 hover:text-primary text-xs transition-colors duration-300">
                 {language === 'ja' ? 'クッキー' : 'Cookies'}
               </a>
             </div>
