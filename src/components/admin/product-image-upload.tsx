@@ -11,7 +11,7 @@ interface ProductImageUploadProps {
   productId: string;
   currentImageUrl?: string;
   onImageUpdate: (newImageUrl: string) => void;
-  language: 'ko' | 'en';
+  language: 'ja' | 'en';
 }
 
 const ProductImageUpload: React.FC<ProductImageUploadProps> = ({
@@ -25,15 +25,15 @@ const ProductImageUpload: React.FC<ProductImageUploadProps> = ({
   const { toast } = useToast();
 
   const content = {
-    ko: {
-      uploadImage: "이미지 업로드",
-      dragDrop: "이미지를 드래그하여 놓거나 클릭하여 선택하세요",
-      currentImage: "현재 이미지",
-      uploading: "업로드 중...",
-      success: "이미지가 성공적으로 업로드되었습니다",
-      error: "이미지 업로드에 실패했습니다",
-      invalidFile: "JPG, PNG 파일만 업로드 가능합니다",
-      fileTooLarge: "파일 크기는 5MB 이하여야 합니다"
+    ja: {
+      uploadImage: "画像をアップロード",
+      dragDrop: "画像をドラッグ＆ドロップするか、クリックして選択してください",
+      currentImage: "現在の画像",
+      uploading: "アップロード中...",
+      success: "画像が正常にアップロードされました",
+      error: "画像のアップロードに失敗しました",
+      invalidFile: "JPG、PNGファイルのみアップロード可能です",
+      fileTooLarge: "ファイルサイズは5MB以下である必要があります"
     },
     en: {
       uploadImage: "Upload Image",

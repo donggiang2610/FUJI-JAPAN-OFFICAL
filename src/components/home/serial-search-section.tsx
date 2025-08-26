@@ -3,7 +3,7 @@ import { SerialSearch } from "@/components/ui/serial-search";
 import { Search, Database } from "lucide-react";
 
 interface SerialSearchSectionProps {
-  language: 'en' | 'th';
+  language: 'en' | 'ja';
 }
 
 const content = {
@@ -12,10 +12,10 @@ const content = {
     subtitle: "Enter your product's serial number to check installation information and status",
     placeholder: "Enter serial number..."
   },
-  th: {
-    title: "ค้นหาหมายเลขซีเรียลผลิตภัณฑ์",
-    subtitle: "ป้อนหมายเลขซีเรียลของผลิตภัณฑ์เพื่อตรวจสอบข้อมูลการติดตั้งและสถานะ",
-    placeholder: "ป้อนหมายเลขซีเรียล..."
+  ja: {
+    title: "製品シリアル番号検索",
+    subtitle: "製品のシリアル番号を入力して、設置情報とステータスを確認してください",
+    placeholder: "シリアル番号を入力..."
   }
 };
 

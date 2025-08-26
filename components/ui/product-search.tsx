@@ -45,18 +45,18 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({
       clearFilters: "Clear Filters",
       resultsFound: "products found"
     },
-    th: {
-      searchPlaceholder: "ค้นหาผลิตภัณฑ์...",
-      filterBy: "ตัวกรอง",
-      category: "หมวดหมู่",
-      allCategories: "ทุกหมวดหมู่",
-      priceRange: "ช่วงราคา",
-      allPrices: "ทุกราคา",
-      under50k: "ต่ำกว่า $500",
+    ja: {
+      searchPlaceholder: "製品を検索...",
+      filterBy: "フィルター",
+      category: "カテゴリー",
+      allCategories: "すべてのカテゴリー",
+      priceRange: "価格帯",
+      allPrices: "すべての価格",
+      under50k: "$500未満",
       from50to100k: "$500 - $1,000",
-      over100k: "มากกว่า $1,000",
-      clearFilters: "ล้างตัวกรอง",
-      resultsFound: "ผลิตภัณฑ์ที่พบ"
+      over100k: "$1,000以上",
+      clearFilters: "フィルターをクリア",
+      resultsFound: "製品が見つかりました"
     }
   };
 

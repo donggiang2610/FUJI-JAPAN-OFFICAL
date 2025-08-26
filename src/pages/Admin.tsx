@@ -53,103 +53,103 @@ const staticProducts = [
   // Control Cabinet Products
   {
     id: "fet-control-cabinet",
-    name_th: "FET CONTROL CABINET",
+    name_ja: "FET制御盤",
     name_en: "FET CONTROL CABINET",
     image_url: fetControlImage,
-    category: { name_th: "ตู้ควบคุม", name_en: "Control Cabinets" },
+    category: { name_ja: "制御盤", name_en: "Control Cabinets" },
     is_active: true,
-    description_th: "โซลูชันแบบรวมสำหรับลิฟต์ความเร็วสูงสุด 4m/s",
+    description_ja: "最大4m/sのエレベーター用統合ソリューション",
     description_en: "Integrated solution for elevator up to 4m/sec"
   },
   {
     id: "fen-control-cabinet", 
-    name_th: "FEN CONTROL CABINET",
+    name_ja: "FEN制御盤",
     name_en: "FEN CONTROL CABINET",
     image_url: fenControlImage,
-    category: { name_th: "ตู้ควบคุม", name_en: "Control Cabinets" },
+    category: { name_ja: "制御盤", name_en: "Control Cabinets" },
     is_active: true,
-    description_th: "ตู้ควบคุมขั้นสูงสำหรับลิฟต์ที่มีคุณสมบัติครบครันและระบบการสื่อสารที่ทันสมัย",
+    description_ja: "包括的な機能と最新の通信システムを備えた高度なエレベーター制御盤",
     description_en: "Advanced control cabinet for elevators with comprehensive features and modern communication systems"
   },
   {
     id: "fes-control-cabinet",
-    name_th: "FES Control Cabinet", 
+    name_ja: "FES制御盤", 
     name_en: "FES Control Cabinet",
     image_url: fesControlImage,
-    category: { name_th: "ตู้ควบคุม", name_en: "Control Cabinets" },
+    category: { name_ja: "制御盤", name_en: "Control Cabinets" },
     is_active: true,
-    description_th: "ตู้ควบคุมที่ออกแบบตาม EN81-20 และเป็นไปตามมาตรฐาน CE",
+    description_ja: "EN81-20に基づいて設計され、CE規格に準拠した制御盤",
     description_en: "Control cabinet designed based on EN81-20 and comply with CE standards"
   },
   // Traction Machine Products
   {
     id: "fjd1-b450-series",
-    name_th: "FJD1-B450 SERIES",
+    name_ja: "FJD1-B450シリーズ",
     name_en: "FJD1-B450 SERIES", 
     image_url: fjd1B450Image,
-    category: { name_th: "เครื่องลาก", name_en: "Traction Machines" },
+    category: { name_ja: "トラクションマシン", name_en: "Traction Machines" },
     is_active: true,
-    description_th: "เครื่องลากประสิทธิภาพสูงสำหรับลิฟต์ขนาดกลาง",
+    description_ja: "中型エレベーター用高効率トラクションマシン",
     description_en: "High-efficiency traction machine for medium-sized elevators"
   },
   {
     id: "fjd1-b1000-series",
-    name_th: "FJD1-B1000 SERIES",
+    name_ja: "FJD1-B1000シリーズ",
     name_en: "FJD1-B1000 SERIES",
     image_url: fjd1B1000Image,
-    category: { name_th: "เครื่องลาก", name_en: "Traction Machines" },
+    category: { name_ja: "トラクションマシン", name_en: "Traction Machines" },
     is_active: true,
-    description_th: "เครื่องลากขนาดใหญ่สำหรับลิฟต์บรรทุกหนัก",
+    description_ja: "大型重荷重エレベーター用トラクションマシン",
     description_en: "Large traction machine for heavy-duty elevators"
   },
   {
     id: "fjd1-b1600-series", 
-    name_th: "FJD1-B1600 SERIES",
+    name_ja: "FJD1-B1600シリーズ",
     name_en: "FJD1-B1600 SERIES",
     image_url: fjd1B1600Image,
-    category: { name_th: "เครื่องลาก", name_en: "Traction Machines" },
+    category: { name_ja: "トラクションマシン", name_en: "Traction Machines" },
     is_active: true,
-    description_th: "เครื่องลากสำหรับลิฟต์บรรทุกหนักพิเศษ",
+    description_ja: "超重荷重エレベーター用トラクションマシン",
     description_en: "Traction machine for extra heavy-duty elevators"
   },
   {
     id: "fjd1-b2500-series",
-    name_th: "FJD1-B2500 SERIES", 
+    name_ja: "FJD1-B2500シリーズ", 
     name_en: "FJD1-B2500 SERIES",
     image_url: fjd1B2500Image,
-    category: { name_th: "เครื่องลาก", name_en: "Traction Machines" },
+    category: { name_ja: "トラクションマシン", name_en: "Traction Machines" },
     is_active: true,
-    description_th: "เครื่องลากสำหรับลิฟต์บรรทุกหนักสูงสุด",
+    description_ja: "最大重荷重エレベーター用トラクションマシン",
     description_en: "Traction machine for maximum heavy-duty elevators"
   },
   {
     id: "fjd2-b450-series",
-    name_th: "FJD2-B450 (φ240) Series",
+    name_ja: "FJD2-B450 (φ240)シリーズ",
     name_en: "FJD2-B450 (φ240) Series",
     image_url: fjd2B450Image,
-    category: { name_th: "เครื่องลาก", name_en: "Traction Machines" },
+    category: { name_ja: "トラクションマシン", name_en: "Traction Machines" },
     is_active: true,
-    description_th: "เครื่องลากรุ่นใหม่ขนาด φ240 มม.",
+    description_ja: "新世代φ240mmトラクションマシン",
     description_en: "New generation traction machine φ240 mm"
   },
   {
     id: "fjd2-b800-series",
-    name_th: "FJD2-B800 (φ240) Series",
+    name_ja: "FJD2-B800 (φ240)シリーズ",
     name_en: "FJD2-B800 (φ240) Series", 
     image_url: fjd2B800Image,
-    category: { name_th: "เครื่องลาก", name_en: "Traction Machines" },
+    category: { name_ja: "トラクションマシン", name_en: "Traction Machines" },
     is_active: true,
-    description_th: "เครื่องลากประสิทธิภาพสูงขนาด φ240 มม.",
+    description_ja: "高性能φ240mmトラクションマシン",
     description_en: "High-performance traction machine φ240 mm"
   },
   {
     id: "fjd2-b630-series",
-    name_th: "FJD2-B630 (φ320) Series",
+    name_ja: "FJD2-B630 (φ320)シリーズ",
     name_en: "FJD2-B630 (φ320) Series",
     image_url: fjd2B630Image,
-    category: { name_th: "เครื่องลาก", name_en: "Traction Machines" },
+    category: { name_ja: "トラクションマシン", name_en: "Traction Machines" },
     is_active: true,
-    description_th: "เครื่องลากขนาดใหญ่ φ320 มม. สำหรับงานหนัก",
+    description_ja: "重荷重用大型φ320mmトラクションマシン",
     description_en: "Large traction machine φ320 mm for heavy-duty applications"
   }
 ];
@@ -189,57 +189,10 @@ const Admin = () => {
       title: "Admin Panel",
       subtitle: "Manage website content and data",
       welcome: "Welcome",
-      logout: "로그아웃",
-      tabs: {
-        products: "제품 관리",
-        inquiries: "문의 관리",
-        categories: "카테고리 관리",
-        serials: "시리얼 번호 관리"
-      },
-      products: {
-        title: "제품 목록",
-        add: "제품 추가",
-        name: "제품명",
-        id: "제품 ID",
-        category: "카테고리",
-        status: "상태",
-        actions: "작업",
-        active: "활성",
-        inactive: "비활성",
-        copyId: "ID 복사",
-        uploadImage: "이미지 업로드"
-      },
-      inquiries: {
-        title: "고객 문의",
-        name: "이름",
-        email: "이메일",
-        company: "회사",
-        message: "메시지",
-        date: "날짜",
-        actions: "작업"
-      },
-      categories: {
-        title: "카테고리 목록",
-        add: "카테고리 추가",
-        name: "이름",
-        description: "설명",
-        icon: "아이콘",
-        status: "상태"
-      },
-      actions: {
-        view: "보기",
-        edit: "편집",
-        delete: "삭제"
-      }
-    },
-    th: {
-      title: "แผงควบคุมผู้ดูแลระบบ",
-      subtitle: "จัดการเนื้อหาเว็บไซต์และข้อมูล",
-      welcome: "ยินดีต้อนรับ",
-      logout: "ออกจากระบบ",
+      logout: "Logout",
       tabs: {
         products: "Product Management",
-        inquiries: "Inquiry Management", 
+        inquiries: "Inquiry Management",
         categories: "Category Management",
         serials: "Serial Number Management"
       },
@@ -259,7 +212,7 @@ const Admin = () => {
       inquiries: {
         title: "Customer Inquiries",
         name: "Name",
-        email: "Email", 
+        email: "Email",
         company: "Company",
         message: "Message",
         date: "Date",
@@ -277,6 +230,53 @@ const Admin = () => {
         view: "View",
         edit: "Edit",
         delete: "Delete"
+      }
+    },
+    ja: {
+      title: "管理パネル",
+      subtitle: "ウェブサイトのコンテンツとデータを管理",
+      welcome: "ようこそ",
+      logout: "ログアウト",
+      tabs: {
+        products: "製品管理",
+        inquiries: "お問い合わせ管理", 
+        categories: "カテゴリー管理",
+        serials: "シリアル番号管理"
+      },
+      products: {
+        title: "製品リスト",
+        add: "製品を追加",
+        name: "製品名",
+        id: "製品ID",
+        category: "カテゴリー",
+        status: "ステータス",
+        actions: "アクション",
+        active: "アクティブ",
+        inactive: "非アクティブ",
+        copyId: "IDをコピー",
+        uploadImage: "画像をアップロード"
+      },
+      inquiries: {
+        title: "お客様からのお問い合わせ",
+        name: "名前",
+        email: "メール", 
+        company: "会社",
+        message: "メッセージ",
+        date: "日付",
+        actions: "アクション"
+      },
+      categories: {
+        title: "カテゴリーリスト",
+        add: "カテゴリーを追加",
+        name: "名前",
+        description: "説明",
+        icon: "アイコン",
+        status: "ステータス"
+      },
+      actions: {
+        view: "表示",
+        edit: "編集",
+        delete: "削除"
       }
     }
   };

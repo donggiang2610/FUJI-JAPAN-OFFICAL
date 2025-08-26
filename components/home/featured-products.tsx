@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 
 interface FeaturedProductsProps {
-  language: 'en' | 'th';
+  language: 'en' | 'ja';
 }
 
 const content = {
@@ -35,29 +35,29 @@ const content = {
       }
     ]
   },
-  th: {
-    title: "ผลิตภัณฑ์เด่น",
-    subtitle: "ค้นพบโซลูชันลิฟต์ของ THAI FUJI ที่สร้างด้วยเทคโนโลยีล้ำสมัย",
-    viewAll: "ดูผลิตภัณฑ์ทั้งหมด",
-    learnMore: "เรียนรู้เพิ่มเติม",
+  ja: {
+    title: "注目製品",
+    subtitle: "最先端技術で作られたFUJI Japanのエレベーターソリューションをご覧ください",
+    viewAll: "すべての製品を見る",
+    learnMore: "詳細を見る",
     products: [
       {
         id: 1,
-        name: "FES ตู้ควบคุม",
-        category: "ระบบควบคุม",
-        description: "ตู้ควบคุมลิฟต์ที่เป็นไปตามมาตรฐาน EN81-20, CE พร้อมคุณสมบัติความปลอดภัยขั้นสูง",
+        name: "FES制御盤",
+        category: "制御システム",
+        description: "EN81-20、CE準拠の高度な安全機能を備えたエレベーター制御盤",
         features: ["EN81-20, CE compliant", "ตรวจสอบแรงเบรกอัตโนมัติ", "อุปกรณ์บายพาสล็อคประตู", "ความปลอดภัยเบรกสำรอง"],
         image: "/lovable-uploads/0b6b45d0-94c1-4fe3-ae57-c38c9a1f2185.png",
-        badge: "ยอดนิยม"
+        badge: "人気"
       },
       {
         id: 2,
-        name: "FJD1 ซีรีส์",
-        category: "ระบบลาก",
-        description: "เครื่องจักรลากความจุสูงพร้อมประสิทธิภาพที่เชื่อถือได้และคุณสมบัติความปลอดภัย",
-        features: ["เบรก AC380V / DC110V", "ความจุโหลดถึง 5500kg", "S5–40% duty ทำงานเสถียรเชื่อถือได้", "ฉนวน Class F ป้องกัน IP41"],
+        name: "FJD1シリーズ",
+        category: "トラクションシステム",
+        description: "信頼性の高い性能と安全機能を備えた大容量トラクションマシン",
+        features: ["AC380V / DC110Vブレーキ", "最大5500kgの積載容量", "S5–40%デューティ、安定・信頼性", "クラスF絶縁、IP41保護"],
         image: "/lovable-uploads/74b9382f-7881-42e9-a882-81b89d7210a6.png",
-        badge: "ใหม่"
+        badge: "新製品"
       }
     ]
   }
