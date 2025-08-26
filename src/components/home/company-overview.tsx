@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -27,40 +27,60 @@ const content = {
 export const CompanyOverview = ({ language }: CompanyOverviewProps) => {
   const t = content[language];
   const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('company-overview');
+    if (element) observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="siemens-section py-20">
+    <section id="company-overview" className="siemens-section py-24">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden">
+          <div className={`relative transition-all duration-1000 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden siemens-card">
               <img 
                 src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Modern building"
                 className="w-full h-full object-cover"
               />
             </div>
+            {/* Floating accent elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-float"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary/20 rounded-full blur-lg animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
 
           {/* Content */}
-          <div className="space-y-8">
-            <h2 className="siemens-title text-4xl md:text-5xl text-foreground">
+          <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}>
+            <h2 className="siemens-title text-5xl md:text-6xl text-foreground">
               {t.title}
             </h2>
             
             <div className="space-y-6 text-lg siemens-subtitle">
-              <p>{t.description1}</p>
-              <p>{t.description2}</p>
-              <p>{t.description3}</p>
+              <p className="leading-relaxed">{t.description1}</p>
+              <p className="leading-relaxed">{t.description2}</p>
+              <p className="leading-relaxed">{t.description3}</p>
             </div>
 
             <Button 
-              className="btn-teal text-background font-semibold px-8 py-3 hover:shadow-teal transition-all duration-300"
+              className="btn-teal text-background font-semibold px-8 py-4 text-lg hover:shadow-teal transition-all duration-300 group"
               onClick={() => navigate('/about')}
             >
               {t.showMore}
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>

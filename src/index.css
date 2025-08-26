@@ -2,105 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-/* FUJI Japan Elevator Professional Design System */
+/* FUJI Japan Elevator Professional Design System - Siemens Style */
 
 @layer base {
   :root {
-    /* Base Colors - Light & Professional */
-    --background: 220 30% 8%;
-    --foreground: 0 0% 95%;
+    /* Siemens-inspired Dark Blue Theme */
+    --background: 220 45% 8%;        /* Deep navy blue background */
+    --foreground: 0 0% 95%;          /* White text */
 
-    /* Siemens-inspired Professional Color Palette */
-    --fuji-navy: 220 30% 8%;       /* Deep navy background */
-    --fuji-blue: 200 100% 50%;     /* Bright cyan blue */
-    --fuji-teal: 180 100% 50%;     /* Bright teal accent */
-    --steel-gray: 220 15% 50%;     /* Steel gray */
-    --steel-light: 220 15% 70%;    /* Light steel */
-    --steel-dark: 220 30% 15%;     /* Dark steel */
+    /* Professional Blue Color Palette */
+    --fuji-navy: 220 45% 8%;         /* Deep navy background */
+    --fuji-blue: 195 100% 50%;       /* Bright cyan blue */
+    --fuji-teal: 175 100% 45%;       /* Bright teal accent */
+    --steel-gray: 220 15% 50%;       /* Steel gray */
+    --steel-light: 220 15% 70%;      /* Light steel */
+    --steel-dark: 220 45% 12%;       /* Dark steel */
 
     /* Card System */
-    --card: 220 25% 12%;
+    --card: 220 40% 12%;
     --card-foreground: 0 0% 95%;
 
     /* Popover */
-    --popover: 220 25% 12%;
+    --popover: 220 40% 12%;
     --popover-foreground: 0 0% 95%;
 
     /* Primary - Bright Cyan Blue */
-    --primary: 200 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 195 100% 50%;
+    --primary-foreground: 220 45% 8%;
 
     /* Secondary - Bright Teal */
-    --secondary: 180 100% 50%;
-    --secondary-foreground: 220 30% 8%;
+    --secondary: 175 100% 45%;
+    --secondary-foreground: 220 45% 8%;
 
     /* Muted */
-    --muted: 220 25% 15%;
+    --muted: 220 40% 15%;
     --muted-foreground: 220 15% 70%;
 
     /* Accent - Bright Teal */
-    --accent: 180 100% 50%;
-    --accent-foreground: 220 30% 8%;
+    --accent: 175 100% 45%;
+    --accent-foreground: 220 45% 8%;
 
     /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders */
-    --border: 220 25% 20%;
-    --input: 220 25% 15%;
-    --ring: 200 100% 50%;
+    --border: 220 40% 20%;
+    --input: 220 40% 15%;
+    --ring: 195 100% 50%;
 
-    /* Industrial Glass Morphism */
-    --glass-bg: 220 25% 15% / 0.8;
-    --glass-border: 200 100% 50% / 0.2;
+    /* Siemens Glass Morphism */
+    --glass-bg: 220 40% 15% / 0.8;
+    --glass-border: 195 100% 50% / 0.2;
     --glass-shadow: 0 0% 0% / 0.3;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(200 100% 50%), hsl(180 100% 50%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220 25% 15%), hsl(220 25% 20%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 30% 8%), hsl(200 100% 50%), hsl(180 100% 50%));
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(175 100% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 40% 15%), hsl(220 40% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 45% 8%), hsl(195 100% 50%), hsl(175 100% 45%));
+    --gradient-blue-rays: radial-gradient(ellipse at center, hsl(195 100% 50% / 0.3), transparent 70%);
 
     /* Professional Shadows */
-    --shadow-sm: 0 2px 4px hsl(220 30% 5% / 0.3);
-    --shadow-md: 0 4px 12px hsl(220 30% 5% / 0.4);
-    --shadow-lg: 0 8px 32px hsl(220 30% 5% / 0.5);
-    --shadow-glow: 0 0 20px hsl(200 100% 50% / 0.4);
-    --shadow-teal: 0 0 20px hsl(180 100% 50% / 0.4);
+    --shadow-sm: 0 2px 4px hsl(220 45% 5% / 0.3);
+    --shadow-md: 0 4px 12px hsl(220 45% 5% / 0.4);
+    --shadow-lg: 0 8px 32px hsl(220 45% 5% / 0.5);
+    --shadow-glow: 0 0 20px hsl(195 100% 50% / 0.4);
+    --shadow-teal: 0 0 20px hsl(175 100% 45% / 0.4);
 
     --radius: 0.5rem;
 
-    --sidebar-background: 220 25% 12%;
+    --sidebar-background: 220 40% 12%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 200 100% 50%;
-    --sidebar-primary-foreground: 220 30% 8%;
-    --sidebar-accent: 220 25% 15%;
+    --sidebar-primary: 195 100% 50%;
+    --sidebar-primary-foreground: 220 45% 8%;
+    --sidebar-accent: 220 40% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 220 25% 20%;
-    --sidebar-ring: 200 100% 50%;
+    --sidebar-border: 220 40% 20%;
+    --sidebar-ring: 195 100% 50%;
   }
 
   .dark {
-    /* Dark mode uses same colors as default for industrial theme */
-    --background: 220 30% 8%;
+    /* Dark mode uses same colors for Siemens theme */
+    --background: 220 45% 8%;
     --foreground: 0 0% 95%;
-    --card: 220 25% 12%;
+    --card: 220 40% 12%;
     --card-foreground: 0 0% 95%;
-    --popover: 220 25% 12%;
+    --popover: 220 40% 12%;
     --popover-foreground: 0 0% 95%;
-    --primary: 200 100% 50%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 180 100% 50%;
-    --secondary-foreground: 220 30% 8%;
-    --muted: 220 25% 15%;
+    --primary: 195 100% 50%;
+    --primary-foreground: 220 45% 8%;
+    --secondary: 175 100% 45%;
+    --secondary-foreground: 220 45% 8%;
+    --muted: 220 40% 15%;
     --muted-foreground: 220 15% 70%;
-    --accent: 180 100% 50%;
-    --accent-foreground: 220 30% 8%;
+    --accent: 175 100% 45%;
+    --accent-foreground: 220 45% 8%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 25% 20%;
-    --input: 220 25% 15%;
-    --ring: 200 100% 50%;
+    --border: 220 40% 20%;
+    --input: 220 40% 15%;
+    --ring: 195 100% 50%;
   }
 }
 
@@ -112,12 +113,38 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', 'Noto Sans JP', 'Montserrat', sans-serif;
-    line-height: 1.6; /* Better for Japanese text */
+    line-height: 1.6;
+  }
+
+  /* Siemens-style animations */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes slide-in-left {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slide-in-right {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes fade-in-up {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
 }
 
 @layer components {
-  /* Industrial Glass Morphism Component */
+  /* Siemens Glass Morphism Component */
   .glass-morphism {
     background: hsl(var(--glass-bg));
     backdrop-filter: blur(20px);
@@ -125,59 +152,15 @@
     box-shadow: 0 8px 32px hsl(var(--glass-shadow));
   }
 
-  /* Industrial Card */
-  .industrial-card {
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
-    box-shadow: var(--shadow-lg);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .industrial-card:hover {
-    box-shadow: var(--shadow-glow);
-    transform: translateY(-2px);
-    border-color: hsl(var(--primary) / 0.5);
-  }
-
-  /* Siemens-style Section */
-  .siemens-section {
-    background: hsl(var(--background));
-    border: 1px solid hsl(var(--border));
-    position: relative;
-    overflow: hidden;
-  }
-
-  .siemens-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--gradient-primary);
-  }
-
-  /* Siemens-style Grid */
-  .siemens-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
-
   /* Siemens Card */
   .siemens-card {
     background: hsl(var(--card));
     border: 1px solid hsl(var(--border));
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-  }
-
-  .siemens-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-glow);
-    border-color: hsl(var(--primary) / 0.5);
+    overflow: hidden;
   }
 
   .siemens-card::before {
@@ -192,8 +175,92 @@
     transition: opacity 0.3s ease;
   }
 
+  .siemens-card:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+    border-color: hsl(var(--primary) / 0.5);
+  }
+
   .siemens-card:hover::before {
     opacity: 1;
+  }
+
+  /* Siemens Section */
+  .siemens-section {
+    background: hsl(var(--background));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .siemens-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+  }
+
+  /* Siemens Grid */
+  .siemens-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  /* Hero Blue Rays Background */
+  .blue-rays-bg {
+    background: hsl(var(--background));
+    position: relative;
+  }
+
+  .blue-rays-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-blue-rays);
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+
+  /* Product Showcase Grid */
+  .product-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+
+  /* News Grid - Siemens Style */
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .news-grid .news-card:first-child {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 768px) {
+    .news-grid .news-card:first-child {
+      grid-column: span 1;
+    }
+  }
+
+  /* Technology Cards */
+  .tech-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+  }
+
+  .tech-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow);
+    border-color: hsl(var(--primary) / 0.6);
   }
 
   /* Hero Gradient */
@@ -208,7 +275,7 @@
 
   /* Teal Gradient */
   .teal-gradient {
-    background: linear-gradient(135deg, hsl(180 100% 50%), hsl(160 100% 50%));
+    background: linear-gradient(135deg, hsl(175 100% 45%), hsl(160 100% 50%));
   }
 
   /* Glow Effect */
@@ -216,27 +283,10 @@
     box-shadow: var(--shadow-glow);
   }
 
-  /* Industrial Button */
-  .btn-industrial {
-    background: var(--gradient-primary);
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: var(--shadow-md);
-  }
-
-  .btn-industrial:hover {
-    box-shadow: var(--shadow-glow);
-    transform: translateY(-1px);
-  }
-
   /* Siemens Button */
   .btn-siemens {
     background: var(--gradient-primary);
-    color: white;
+    color: hsl(var(--primary-foreground));
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -252,7 +302,19 @@
 
   /* Teal Button */
   .btn-teal {
-    background: hsl(180 100% 50%);
+    background: hsl(175 100% 45%);
+    color: hsl(var(--background));
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-teal:hover {
+    box-shadow: var(--shadow-teal);
+    transform: translateY(-1px);
   }
 
   /* Text Gradients */
@@ -264,7 +326,7 @@
   }
 
   .text-gradient-teal {
-    background: linear-gradient(135deg, hsl(180 100% 50%), hsl(160 100% 50%));
+    background: linear-gradient(135deg, hsl(175 100% 45%), hsl(160 100% 50%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -276,6 +338,7 @@
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.2;
+    color: hsl(var(--foreground));
   }
 
   .siemens-subtitle {
@@ -292,5 +355,187 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+
+  /* Blue Rays Animation */
+  .blue-rays {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .blue-ray {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 200vh;
+    background: linear-gradient(to top, transparent, hsl(195 100% 50% / 0.3), transparent);
+    transform-origin: center bottom;
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Product Grid Animations */
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Technology Showcase */
+  .tech-showcase {
+    background: linear-gradient(135deg, hsl(220 45% 8%), hsl(220 40% 12%));
+    position: relative;
+  }
+
+  .tech-showcase::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-blue-rays);
+    opacity: 0.1;
+  }
+
+  /* News Section Styling */
+  .news-section {
+    background: hsl(var(--background));
+    position: relative;
+  }
+
+  .news-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+  }
+
+  .news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow);
+    border-color: hsl(var(--primary) / 0.6);
+  }
+
+  /* Video Play Button */
+  .video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    background: hsl(var(--primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-glow);
+    transition: all 0.3s ease;
+  }
+
+  .video-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: var(--shadow-glow), 0 0 30px hsl(var(--primary) / 0.6);
+  }
+
+  /* Breadcrumb Navigation */
+  .siemens-breadcrumb-nav {
+    background: hsl(var(--muted) / 0.5);
+    padding: 1rem 0;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  /* Search Bar Styling */
+  .siemens-search {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: hsl(var(--foreground));
+    transition: all 0.3s ease;
+  }
+
+  .siemens-search:focus {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
+  }
+
+  /* Global Navigation */
+  .global-nav {
+    background: hsl(var(--background) / 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  /* Footer Styling */
+  .siemens-footer {
+    background: linear-gradient(135deg, hsl(220 50% 6%), hsl(220 45% 8%));
+    border-top: 2px solid hsl(var(--primary));
+  }
+
+  /* Utility Classes */
+  .text-siemens-blue {
+    color: hsl(195 100% 50%);
+  }
+
+  .text-siemens-teal {
+    color: hsl(175 100% 45%);
+  }
+
+  .bg-siemens-blue {
+    background-color: hsl(195 100% 50%);
+  }
+
+  .bg-siemens-teal {
+    background-color: hsl(175 100% 45%);
+  }
+
+  /* Professional spacing system */
+  .space-siemens {
+    margin: 2rem 0;
+  }
+
+  .space-siemens-lg {
+    margin: 4rem 0;
+  }
+
+  /* Grid layouts */
+  .grid-siemens-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .grid-siemens-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Professional borders */
+  .border-siemens {
+    border: 1px solid hsl(var(--border));
+  }
+
+  .border-siemens-primary {
+    border: 1px solid hsl(var(--primary) / 0.3);
   }
 }
