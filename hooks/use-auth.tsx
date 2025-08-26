@@ -38,6 +38,11 @@ export const useAuth = () => {
   };
 
   useEffect(() => {
+    if (!supabase) {
+      console.warn('Supabase client not initialized');
+      return;
+    }
+    
     // Set up auth state listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {

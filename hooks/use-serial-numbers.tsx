@@ -40,6 +40,11 @@ export const useSerialNumbers = () => {
   const { toast } = useToast();
 
   const fetchSerialNumbers = async () => {
+    if (!supabase) {
+      console.warn('Supabase client not initialized');
+      return;
+    }
+    
     try {
       const { data, error } = await supabase
         .from('serial_numbers')
