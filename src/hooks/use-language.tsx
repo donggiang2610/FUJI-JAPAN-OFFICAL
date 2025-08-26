@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-type Language = 'en' | 'th';
+type Language = 'en' | 'ja';
 
 interface LanguageContextType {
   language: Language;
@@ -15,7 +15,7 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
   useEffect(() => {
     // Load language from localStorage or detect from browser
     const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && ['en', 'th'].includes(savedLanguage)) {
+    if (savedLanguage && ['en', 'ja'].includes(savedLanguage)) {
       setLanguage(savedLanguage);
     } else {
       // Set English as default language

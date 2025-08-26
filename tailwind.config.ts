@@ -21,8 +21,8 @@ export default {
 			fontFamily: {
 				montserrat: ['Montserrat', 'sans-serif'],
 				'open-sans': ['Open Sans', 'sans-serif'],
-				sarabun: ['Sarabun', 'sans-serif'],
-				prompt: ['Prompt', 'sans-serif'],
+				'noto-jp': ['Noto Sans JP', 'sans-serif'],
+				'mplus': ['M PLUS 1p', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

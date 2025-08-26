@@ -6,8 +6,8 @@ import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { SerialSearch } from "@/components/ui/serial-search";
 
 interface HeaderProps {
-  language: 'en' | 'th';
-  onLanguageChange: (lang: 'en' | 'th') => void;
+  language: 'en' | 'ja';
+  onLanguageChange: (lang: 'en' | 'ja') => void;
 }
 
 const navigation = {
@@ -33,26 +33,26 @@ const navigation = {
     name: 'Contact',
     href: '/contact'
   }],
-  th: [{
-    name: 'หน้าหลัก',
+  ja: [{
+    name: 'ホーム',
     href: '/'
   }, {
-    name: 'ผลิตภัณฑ์',
+    name: '製品',
     href: '/products'
   }, {
-    name: 'บริการ',
+    name: 'サービス',
     href: '/services'
   }, {
-    name: 'เกี่ยวกับเรา',
+    name: '会社概要',
     href: '/about'
   }, {
-    name: 'ข่าวสาร',
+    name: 'ニュース',
     href: '/news'
   }, {
-    name: 'สมัครงาน',
+    name: '採用情報',
     href: '/careers'
   }, {
-    name: 'ติดต่อเรา',
+    name: 'お問い合わせ',
     href: '/contact'
   }]
 };
@@ -72,7 +72,7 @@ export const Header = ({
           <NavLink to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/e0326921-6f08-4e36-bf37-3adf3bd694a0.png" 
-              alt="THAI FUJI ELEVATOR CO.,LTD." 
+              alt="FUJI Japan Elevator" 
               className="h-11 w-auto md:h-14 object-contain bg-transparent" 
             />
           </NavLink>
@@ -100,7 +100,7 @@ export const Header = ({
           <div className="hidden lg:flex items-center space-x-4 flex-1 max-w-md justify-end">
             <div className="w-full max-w-xs">
               <SerialSearch 
-                placeholder={language === 'th' ? 'ค้นหาหมายเลขซีเรียล...' : 'Search serial number...'} 
+                placeholder={language === 'ja' ? 'シリアル番号を検索...' : 'Search serial number...'} 
                 language={language} 
               />
             </div>
@@ -145,7 +145,7 @@ export const Header = ({
               {/* Mobile Search */}
               <div className="px-3 py-2">
                 <SerialSearch 
-                  placeholder={language === 'th' ? 'ค้นหาหมายเลขซีเรียล...' : 'Search serial number...'} 
+                  placeholder={language === 'ja' ? 'シリアル番号を検索...' : 'Search serial number...'} 
                   language={language} 
                 />
               </div>

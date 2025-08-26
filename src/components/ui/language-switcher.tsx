@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import flagsImage from "@/assets/flags.png";
 
 interface LanguageSwitcherProps {
-  currentLang: 'en' | 'th';
-  onLanguageChange: (lang: 'en' | 'th') => void;
+  currentLang: 'en' | 'ja';
+  onLanguageChange: (lang: 'en' | 'ja') => void;
 }
 
 export const LanguageSwitcher = ({ currentLang, onLanguageChange }: LanguageSwitcherProps) => {
@@ -24,16 +24,16 @@ export const LanguageSwitcher = ({ currentLang, onLanguageChange }: LanguageSwit
         />
       </Button>
       
-      {/* Thai Flag Button */}
+      {/* Japanese Flag Button */}
       <Button 
         variant="ghost" 
         size="sm" 
-        className={`glass-morphism p-2 ${currentLang === 'th' ? 'ring-2 ring-white' : ''}`}
-        onClick={() => onLanguageChange('th')}
+        className={`glass-morphism p-2 ${currentLang === 'ja' ? 'ring-2 ring-white' : ''}`}
+        onClick={() => onLanguageChange('ja')}
       >
         <div className="w-12 h-8 bg-cover bg-center rounded-sm" 
              style={{ 
-               backgroundImage: `url(/lovable-uploads/fbefb1b5-50a9-43d5-a8ed-e863e74aa6cf.png)`
+               backgroundImage: `url(https://images.pexels.com/photos/161963/flag-japan-japanese-asia-161963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`
              }} 
         />
       </Button>

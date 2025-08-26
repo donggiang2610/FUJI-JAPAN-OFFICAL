@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* THAI FUJI ELEVATOR Professional Design System */
+/* FUJI Japan Elevator Professional Design System */
 
 @layer base {
   :root {
@@ -10,7 +10,7 @@
     --background: 0 0% 100%;
     --foreground: 220 25% 15%;
 
-    /* Thai Professional Color Palette */
+    /* Japanese Professional Color Palette */
     --thai-navy: 252 92% 22%;      /* Deep purple navy #22056b */
     --thai-ocean: 252 92% 22%;     /* Primary color #22056b */
     --thai-orange: 44 84% 51%;     /* Gold accent #e5ab1f */
@@ -131,8 +131,9 @@
   }
 
   body {
-    @apply bg-background text-foreground font-montserrat;
-    line-height: 1.7; /* Better for Thai text */
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    line-height: 1.6; /* Better for Japanese text */
   }
 }
 

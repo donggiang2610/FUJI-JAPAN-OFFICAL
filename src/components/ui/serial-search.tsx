@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 interface SerialSearchProps {
   placeholder?: string;
   onSearch?: (serialNumber: string) => void;
-  language?: 'en' | 'th';
+  language?: 'en' | 'ja';
 }
 
 export const SerialSearch = ({ placeholder, onSearch, language = 'en' }: SerialSearchProps) => {
@@ -54,32 +54,32 @@ export const SerialSearch = ({ placeholder, onSearch, language = 'en' }: SerialS
       loginMessage: "Please log in to search for serial numbers",
       loginButton: "Go to Login"
     },
-    th: {
-      searchResult: "ผลการค้นหา",
-      searching: "กำลังค้นหา...",
-      notFound: "ไม่พบผลลัพธ์",
-      serialNumber: "หมายเลขซีเรียล",
-      status: "สถานะ",
-      location: "ที่ตั้ง",
-      installationDate: "วันที่ติดตั้ง",
-      productName: "ชื่อผลิตภัณฑ์",
-      description: "รายละเอียด",
-      category: "หมวดหมู่",
-      model: "รุ่น",
-      specifications: "ข้อมูลจำเพาะ",
-      features: "คุณสมบัติ",
-      active: "Origin",
-      maintenance: "อยู่ระหว่างบำรุงรักษา",
-      retired: "หยุดใช้งาน",
-      errorMessage: "เกิดข้อผิดพลาดในการค้นหา",
-      loginRequired: "ต้องเข้าสู่ระบบ",
-      loginMessage: "กรุณาเข้าสู่ระบบเพื่อค้นหาหมายเลขซีเรียล",
-      loginButton: "ไปที่หน้าเข้าสู่ระบบ"
+    ja: {
+      searchResult: "検索結果",
+      searching: "検索中...",
+      notFound: "結果が見つかりません",
+      serialNumber: "シリアル番号",
+      status: "ステータス",
+      location: "設置場所",
+      installationDate: "設置日",
+      productName: "製品名",
+      description: "説明",
+      category: "カテゴリー",
+      model: "モデル",
+      specifications: "仕様",
+      features: "機能",
+      active: "稼働中",
+      maintenance: "メンテナンス中",
+      retired: "運用終了",
+      errorMessage: "検索中にエラーが発生しました",
+      loginRequired: "ログインが必要です",
+      loginMessage: "シリアル番号を検索するにはログインしてください",
+      loginButton: "ログインページへ"
     }
   };
 
   // Ensure we have a valid language and content
-  const validLanguage = language === 'th' ? 'th' : 'en';
+  const validLanguage = language === 'ja' ? 'ja' : 'en';
   const t = content[validLanguage];
 
   const handleSearch = async () => {
@@ -254,12 +254,12 @@ export const SerialSearch = ({ placeholder, onSearch, language = 'en' }: SerialS
                             </h3>
                             {result.product.category && (
                               <Badge variant="secondary" className="text-xs">
-                                {validLanguage === 'th' ? result.product.category.name_th : result.product.category.name_en}
+                               {validLanguage === 'ja' ? result.product.category.name_ja || result.product.category.name_en : result.product.category.name_en}
                               </Badge>
                             )}
                           </div>
                           <p className="text-muted-foreground leading-relaxed">
-                            {validLanguage === 'th' ? result.product.description_th : result.product.description_en}
+                           {validLanguage === 'ja' ? result.product.description_ja || result.product.description_en : result.product.description_en}
                           </p>
                         </div>
 
@@ -282,7 +282,7 @@ export const SerialSearch = ({ placeholder, onSearch, language = 'en' }: SerialS
                         )}
 
                         {/* Device Features */}
-                        {((validLanguage === 'th' && result.product.features_th?.length) || 
+                        {((validLanguage === 'ja' && result.product.features_ja?.length) || 
                           (validLanguage === 'en' && result.product.features_en?.length)) && (
                           <div className="bg-gradient-to-r from-secondary/5 to-accent/5 rounded-xl p-4 border border-border/30">
                             <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
@@ -290,7 +290,7 @@ export const SerialSearch = ({ placeholder, onSearch, language = 'en' }: SerialS
                               {t.features}
                             </h4>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                              {(validLanguage === 'th' ? result.product.features_th : result.product.features_en)?.map((feature, index) => (
+                              {(validLanguage === 'ja' ? result.product.features_ja || result.product.features_en : result.product.features_en)?.map((feature, index) => (
                                 <div key={index} className="flex items-center gap-3 p-2 rounded-lg bg-background/30">
                                   <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
                                   <span className="text-sm">{feature}</span>
@@ -304,23 +304,23 @@ export const SerialSearch = ({ placeholder, onSearch, language = 'en' }: SerialS
                         <div className="bg-gradient-to-r from-accent/5 to-primary/5 rounded-xl p-4 border border-border/30">
                           <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                             <span className="w-2 h-2 bg-accent rounded-full"></span>
-                            {validLanguage === 'th' ? 'ข้อมูลอุปกรณ์' : 'Device Information'}
+                            {validLanguage === 'ja' ? '機器情報' : 'Device Information'}
                           </h4>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                             <div className="flex items-center justify-between p-2 rounded-lg bg-background/50 border border-border/30">
                               <span className="text-muted-foreground font-medium">
-                                {validLanguage === 'th' ? 'รหัสผลิตภัณฑ์' : 'Product ID'}
+                                {validLanguage === 'ja' ? '製品ID' : 'Product ID'}
                               </span>
                               <span className="font-mono font-semibold">{result.product.id}</span>
                             </div>
                             <div className="flex items-center justify-between p-2 rounded-lg bg-background/50 border border-border/30">
                               <span className="text-muted-foreground font-medium">
-                                {validLanguage === 'th' ? 'ประเภทผลิตภัณฑ์' : 'Product Type'}
+                                {validLanguage === 'ja' ? '製品タイプ' : 'Product Type'}
                               </span>
                               <span className="font-semibold">
                                 {result.product.category 
-                                  ? (validLanguage === 'th' ? result.product.category.name_th : result.product.category.name_en)
-                                  : (validLanguage === 'th' ? 'ไม่ระบุ' : 'Not specified')
+                                  ? (validLanguage === 'ja' ? result.product.category.name_ja || result.product.category.name_en : result.product.category.name_en)
+                                  : (validLanguage === 'ja' ? '未指定' : 'Not specified')
                                 }
                               </span>
                             </div>

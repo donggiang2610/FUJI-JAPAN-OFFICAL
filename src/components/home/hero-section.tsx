@@ -8,13 +8,13 @@ import elevatorControlRoom from "@/assets/thai-control-systems.jpg";
 import modernFactory from "@/assets/modern-factory-bg.jpg";
 import modernBuildingHero from "@/assets/modern-building-hero-new.jpg";
 interface HeroSectionProps {
-  language: 'en' | 'th';
+  language: 'en' | 'ja';
 }
 const content = {
   en: {
     title: "PROFESSIONAL",
     titleHighlight: "ELEVATOR SOLUTIONS",
-    subtitle: "Elevating Thailand with Japanese Quality - Leading provider of passenger elevators, freight elevators, escalators, maintenance and modernization services.",
+    subtitle: "Advanced Japanese Elevator Technology - Leading provider of passenger elevators, freight elevators, escalators, maintenance and modernization services.",
     cta1: "View Products",
     cta2: "About Us",
     stats: [{
@@ -31,24 +31,24 @@ const content = {
       label: "Reliability"
     }]
   },
-  th: {
-    title: "โซลูชันลิฟต์",
-    titleHighlight: "มืออาชีพ",
-    subtitle: "ยกระดับประเทศไทยด้วยคุณภาพแบบญี่ปุ่น - ผู้นำในการให้บริการลิฟต์โดยสาร ลิฟต์บรรทุกสินค้า บันไดเลื่อน การบำรุงรักษา และการปรับปรุงระบบ",
-    cta1: "ดูผลิตภัณฑ์",
-    cta2: "เกี่ยวกับเรา",
+  ja: {
+    title: "プロフェッショナル",
+    titleHighlight: "エレベーターソリューション",
+    subtitle: "先進的な日本のエレベーター技術 - 乗用エレベーター、貨物エレベーター、エスカレーター、メンテナンス、モダナイゼーションサービスの大手プロバイダー",
+    cta1: "製品を見る",
+    cta2: "会社概要",
     stats: [{
       number: "25+",
-      label: "ปีประสบการณ์"
+      label: "年の経験"
     }, {
       number: "5,000+",
-      label: "การติดตั้ง"
+      label: "設置実績"
     }, {
       number: "15+",
-      label: "ประเทศ"
+      label: "国"
     }, {
       number: "99.9%",
-      label: "ความน่าเชื่อถือ"
+      label: "信頼性"
     }]
   }
 };
@@ -83,7 +83,7 @@ export const HeroSection = ({
           </div>
 
           {/* Main Title */}
-          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-8 ${language === 'th' ? 'font-sarabun' : 'font-montserrat'}`}>
+          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-8 ${language === 'ja' ? 'font-noto-jp' : 'font-montserrat'}`}>
             <span className="block text-foreground">{t.title}</span>
             <span className="block bg-gradient-to-r from-primary via-primary-glow to-secondary bg-clip-text text-transparent">
               {t.titleHighlight}
@@ -91,7 +91,7 @@ export const HeroSection = ({
           </h1>
           
           {/* Subtitle */}
-          <p className={`text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12 ${language === 'th' ? 'font-sarabun' : 'font-open-sans'}`}>
+          <p className={`text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12 ${language === 'ja' ? 'font-noto-jp' : 'font-open-sans'}`}>
             {t.subtitle}
           </p>
 
@@ -143,11 +143,11 @@ export const HeroSection = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="glass-morphism rounded-2xl p-6 border border-border/30 backdrop-blur-xl">
-                    <h4 className={`font-bold text-xl mb-3 text-foreground ${language === 'th' ? 'font-sarabun' : 'font-montserrat'}`}>
-                      {language === 'th' ? 'การติดตั้งที่เชื่อถือได้' : 'Trusted Installation'}
+                    <h4 className={`font-bold text-xl mb-3 text-foreground ${language === 'ja' ? 'font-noto-jp' : 'font-montserrat'}`}>
+                      {language === 'ja' ? '信頼できる設置' : 'Trusted Installation'}
                     </h4>
-                    <p className={`text-sm text-muted-foreground leading-relaxed ${language === 'th' ? 'font-sarabun' : 'font-open-sans'}`}>
-                      {language === 'th' ? 'ปลอดภัยและมีประสิทธิภาพด้วยนวัตกรรมล่าสุด' : 'Safe and efficient with latest innovations'}
+                    <p className={`text-sm text-muted-foreground leading-relaxed ${language === 'ja' ? 'font-noto-jp' : 'font-open-sans'}`}>
+                      {language === 'ja' ? '最新のイノベーションで安全かつ効率的' : 'Safe and efficient with latest innovations'}
                     </p>
                   </div>
                 </div>
@@ -160,11 +160,11 @@ export const HeroSection = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="glass-morphism rounded-2xl p-6 border border-border/30 backdrop-blur-xl">
-                    <h4 className={`font-bold text-xl mb-3 text-foreground ${language === 'th' ? 'font-sarabun' : 'font-montserrat'}`}>
-                      {language === 'th' ? 'ระบบควบคุมอัจฉริยะ' : 'Intelligent Control Systems'}
+                    <h4 className={`font-bold text-xl mb-3 text-foreground ${language === 'ja' ? 'font-noto-jp' : 'font-montserrat'}`}>
+                      {language === 'ja' ? 'インテリジェント制御システム' : 'Intelligent Control Systems'}
                     </h4>
-                    <p className={`text-sm text-muted-foreground leading-relaxed ${language === 'th' ? 'font-sarabun' : 'font-open-sans'}`}>
-                      {language === 'th' ? 'การตรวจสอบแบบเรียลไทม์และการจัดการอัจฉริยะ' : 'Real-time monitoring and smart management'}
+                    <p className={`text-sm text-muted-foreground leading-relaxed ${language === 'ja' ? 'font-noto-jp' : 'font-open-sans'}`}>
+                      {language === 'ja' ? 'リアルタイム監視とスマート管理' : 'Real-time monitoring and smart management'}
                     </p>
                   </div>
                 </div>

@@ -5,22 +5,22 @@ import { Button } from "@/components/ui/button";
 import fujiLogo from "@/assets/fuji-logo-new.png";
 import worldMapBg from "@/assets/world-map-bg.png";
 interface FooterProps {
-  language: 'en' | 'th';
+  language: 'en' | 'ja';
 }
 const content = {
   en: {
-    company: "THAI FUJI ELEVATOR CO.,LTD.",
-    tagline: "Elevating Thailand with Japanese Quality",
+    company: "FUJI Japan Elevator",
+    tagline: "Advanced Japanese Elevator Technology",
     quickLinks: "Quick Links",
     contact: "Contact Information",
     newsletter: "Stay Connected",
     newsletterText: "Subscribe to our newsletter for the latest updates and innovations",
     subscribe: "Subscribe",
-    address: "232-234 Rama 3 Road, Bang Kho Laem, Bangkok 10120, Thailand",
-    phone: "+66-22894953",
-    email: "info@thai-fuji.com",
-    website: "thai-fuji.com",
-    copyright: "© 2024 THAI FUJI ELEVATOR CO.,LTD. All rights reserved.",
+    address: "Shinmei minami 1-1-41, Adachi-ku, Tokyo, Japan",
+    phone: "+81-3-1234-5678",
+    email: "info@fuji-elevator.jp",
+    website: "fuji-elevator.jp",
+    copyright: "© 2024 FUJI Japan Elevator. All rights reserved.",
     links: [{
       name: "Home",
       href: "/"
@@ -38,33 +38,33 @@ const content = {
       href: "/contact"
     }]
   },
-  th: {
-    company: "บริษัท ไทย ฟูจิ เอลิเวเตอร์ จำกัด",
-    tagline: "ยกระดับประเทศไทยด้วยคุณภาพแบบญี่ปุ่น",
-    quickLinks: "ลิงก์ด่วน",
-    contact: "ข้อมูลติดต่อ",
-    newsletter: "ติดตามข่าวสาร",
-    newsletterText: "สมัครรับข่าวสารและนวัตกรรมล่าสุดจากเรา",
-    subscribe: "สมัครรับข่าวสาร",
-    address: "232-234 ถนนพระราม 3 บางคอแหลม กรุงเทพฯ 10120 ประเทศไทย",
-    phone: "+66-22894953",
-    email: "info@thai-fuji.com",
-    website: "thai-fuji.com",
-    copyright: "© 2024 บริษัท ไทย ฟูจิ เอลิเวเตอร์ จำกัด สงวนลิขสิทธิ์",
+  ja: {
+    company: "富士日本エレベーター株式会社",
+    tagline: "先進的な日本のエレベーター技術",
+    quickLinks: "クイックリンク",
+    contact: "お問い合わせ",
+    newsletter: "最新情報",
+    newsletterText: "最新のアップデートとイノベーションをお届けするニュースレターにご登録ください",
+    subscribe: "登録する",
+    address: "東京都足立区新田南1-1-41",
+    phone: "+81-3-1234-5678",
+    email: "info@fuji-elevator.jp",
+    website: "fuji-elevator.jp",
+    copyright: "© 2024 富士日本エレベーター株式会社 無断転載禁止",
     links: [{
-      name: "หน้าแรก",
+      name: "ホーム",
       href: "/"
     }, {
-      name: "เกี่ยวกับเรา",
+      name: "会社概要",
       href: "/about"
     }, {
-      name: "ผลิตภัณฑ์",
+      name: "製品",
       href: "/products"
     }, {
-      name: "บริการ",
+      name: "サービス",
       href: "/services"
     }, {
-      name: "ติดต่อ",
+      name: "お問い合わせ",
       href: "/contact"
     }]
   }
@@ -128,7 +128,7 @@ export const Footer = ({
               </div>
             </div>
             <p className="text-white/70 text-lg leading-relaxed max-w-lg mb-8">
-              {language === 'th' ? "บริษัท ไทย ฟูจิ เอลิเวเตอร์ จำกัด ผู้ให้บริการระบบลิฟต์ บันไดเลื่อน และบริการบำรุงรักษาด้วยเทคโนโลยีญี่ปุ่นที่ทันสมัย พร้อมนวัตกรรม AI และระบบอัจฉริยะ" : "THAI FUJI ELEVATOR CO.,LTD. is a leading provider of passenger elevators, freight elevators, escalators, maintenance and modernization services with advanced Japanese technology, AI innovations and smart systems."}
+              {language === 'ja' ? "富士日本エレベーター株式会社は、先進的な日本の技術、AIイノベーション、スマートシステムを備えた乗用エレベーター、貨物エレベーター、エスカレーター、メンテナンス、モダナイゼーションサービスの大手プロバイダーです。" : "FUJI Japan Elevator is a leading provider of passenger elevators, freight elevators, escalators, maintenance and modernization services with advanced Japanese technology, AI innovations and smart systems."}
             </p>
             
             {/* Social Icons */}
@@ -206,13 +206,13 @@ export const Footer = ({
             <p className="text-white/60 text-sm">{t.copyright}</p>
             <div className="flex space-x-8 mt-4 md:mt-0">
               <a href="#" className="text-white/60 hover:text-primary text-sm transition-colors duration-300">
-                {language === 'th' ? 'นโยบายความเป็นส่วนตัว' : 'Privacy Policy'}
+                {language === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}
               </a>
               <a href="#" className="text-white/60 hover:text-primary text-sm transition-colors duration-300">
-                {language === 'th' ? 'เงื่อนไขการใช้บริการ' : 'Terms of Service'}
+                {language === 'ja' ? '利用規約' : 'Terms of Service'}
               </a>
               <a href="#" className="text-white/60 hover:text-primary text-sm transition-colors duration-300">
-                {language === 'th' ? 'คุกกี้' : 'Cookies'}
+                {language === 'ja' ? 'クッキー' : 'Cookies'}
               </a>
             </div>
           </div>

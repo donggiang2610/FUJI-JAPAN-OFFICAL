@@ -7,50 +7,50 @@ import elevatorInterior from "@/assets/elevator-interior.jpg";
 import elevatorShaft from "@/assets/elevator-shaft.jpg";
 
 interface ServicesSectionProps {
-  language: 'en' | 'th';
+  language: 'en' | 'ja';
 }
 
 const content = {
-  th: {
-    title: "บริการ",
-    subtitle: "บริการลิฟต์มืออาชีพเพื่อรับประกันการดำเนินงานที่ปลอดภัยและมีประสิทธิภาพ",
-    viewAllServices: "ดูบริการทั้งหมด",
+  ja: {
+    title: "サービス",
+    subtitle: "安全で効率的な運用を保証するプロフェッショナルなエレベーターサービス",
+    viewAllServices: "すべてのサービスを見る",
     services: [
       {
         icon: Wrench,
-        title: "การติดตั้ง",
-        description: "การติดตั้งลิฟต์อย่างปลอดภัยและแม่นยำโดยช่างผู้เชี่ยวชาญ",
-        features: ["สำรวจพื้นที่", "ติดตั้งแบบมืออาชีพ", "ตรวจสอบคุณภาพ"]
+        title: "設置サービス",
+        description: "専門技術者による安全で正確なエレベーター設置",
+        features: ["現地調査", "プロフェッショナル設置", "品質検査"]
       },
       {
         icon: Settings,
-        title: "การบำรุงรักษา",
-        description: "การตรวจสอบและจัดการเป็นประจำเพื่อรักษาประสิทธิภาพที่เหมาะสม",
-        features: ["ตรวจสอบประจำ", "บำรุงรักษาเชิงป้องกัน", "เพิ่มประสิทธิภาพ"]
+        title: "メンテナンス",
+        description: "最適なパフォーマンスを維持するための定期点検と管理",
+        features: ["定期点検", "予防保全", "性能最適化"]
       },
       {
         icon: Zap,
-        title: "การปรับปรุงสมัยใหม่",
-        description: "อัพเกรดลิฟต์เดิมด้วยเทคโนโลยีล่าสุด",
-        features: ["อัพเกรดระบบ", "ประหยัดพลังงาน", "เพิ่มความปลอดภัย"]
+        title: "モダナイゼーション",
+        description: "最新技術で既存エレベーターをアップグレード",
+        features: ["システムアップグレード", "省エネルギー", "安全性向上"]
       },
       {
         icon: Phone,
-        title: "ซ่อมแซมฉุกเฉิน",
-        description: "การตอบสนองฉุกเฉิน 24 ชั่วโมงเพื่อแก้ไขปัญหาอย่างรวดเร็ว",
-        features: ["ตอบสนอง 24 ชั่วโมง", "เรียกช่างฉุกเฉิน", "วินิจฉัยทางไกล"]
+        title: "緊急修理",
+        description: "迅速な問題解決のための24時間緊急対応",
+        features: ["24時間対応", "緊急派遣", "遠隔診断"]
       },
       {
         icon: Users,
-        title: "การให้คำปรึกษา",
-        description: "การให้คำปรึกษาผู้เชี่ยวชาญสำหรับโครงการลิฟต์ทุกด้าน",
-        features: ["วางแผนโครงการ", "คำแนะนำทางเทคนิค", "เพิ่มประสิทธิภาพต้นทุน"]
+        title: "コンサルティング",
+        description: "エレベータープロジェクトのあらゆる側面に関する専門的なコンサルティング",
+        features: ["プロジェクト計画", "技術アドバイス", "コスト最適化"]
       },
       {
         icon: Shield,
-        title: "การตรวจสอบความปลอดภัย",
-        description: "การตรวจสอบความปลอดภัยเป็นประจำเพื่อป้องกันอุบัติเหตุและรับประกันความปลอดภัย",
-        features: ["ตรวจสอบความปลอดภัย", "วิเคราะห์ความเสี่ยง", "แผนการปรับปรุง"]
+        title: "安全点検",
+        description: "事故を防ぎ安全を確保するための定期安全点検",
+        features: ["安全点検", "リスク分析", "改善計画"]
       }
     ]
   },
@@ -155,10 +155,10 @@ export const ServicesSection = ({ language }: ServicesSectionProps) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div className="absolute bottom-6 left-6 text-white">
               <h4 className="font-bold text-xl mb-2">
-                {language === 'th' ? 'ภายในลิฟต์พรีเมี่ยม' : 'Premium Elevator Interior'}
+                {language === 'ja' ? 'プレミアムエレベーター内装' : 'Premium Elevator Interior'}
               </h4>
               <p className="text-gray-200">
-                {language === 'th' ? 'การออกแบบที่ทันสมัยและหรูหราให้ประสบการณ์การขับขี่ที่สะดวกสบาย' : 'Modern and sophisticated design providing comfortable ride experience'}
+                {language === 'ja' ? '快適な乗車体験を提供するモダンで洗練されたデザイン' : 'Modern and sophisticated design providing comfortable ride experience'}
               </p>
             </div>
           </div>
@@ -171,10 +171,10 @@ export const ServicesSection = ({ language }: ServicesSectionProps) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div className="absolute bottom-6 left-6 text-white">
               <h4 className="font-bold text-xl mb-2">
-                {language === 'th' ? 'ระบบลากขั้นสูง' : 'Advanced Traction System'}
+                {language === 'ja' ? '先進的なトラクションシステム' : 'Advanced Traction System'}
               </h4>
               <p className="text-gray-200">
-                {language === 'th' ? 'รับประกันการดำเนินงานที่ปลอดภัยและมีประสิทธิภาพด้วยเทคโนโลยีล้ำสมัย' : 'Ensuring safe and efficient operation with cutting-edge technology'}
+                {language === 'ja' ? '最先端技術で安全で効率的な運用を保証' : 'Ensuring safe and efficient operation with cutting-edge technology'}
               </p>
             </div>
           </div>
