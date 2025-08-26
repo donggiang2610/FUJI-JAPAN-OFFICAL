@@ -122,7 +122,7 @@ const content = {
   }
 };
 
-export const TechnologyShowcase = ({ language }: TechnologyShowcaseProps) => {
+export const NewsStoriesSection = ({ language }: NewsStoriesSectionProps) => {
   const t = content[language];
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
